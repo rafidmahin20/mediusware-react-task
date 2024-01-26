@@ -24,7 +24,6 @@ const Problem1 = () => {
         return tasks.filter((task) => task.status.toLowerCase() === 'completed');
       default:
         return tasks.sort((a, b) => {
-          // Order: Active, Completed, Others
           const order = { active: 1, completed: 2 };
           return (order[a.status.toLowerCase()] || 3) - (order[b.status.toLowerCase()] || 3);
         });
